@@ -35,10 +35,10 @@ This project aims to:
 ```
 project/
 ├─ src/                 # source code for all algorithms
-│  ├─ a_star.py
-│  ├─ dijkstra.py
-│  ├─ dfs.py
-│  └─ jps.py
+│  ├─ algorithms/jps.py
+│  ├─ core/utils.py
+│  ├─ visualizations/charts.py
+│  └─ main.py
 ├─ results/             # experiment results and performance logs
 ├─ docs/                # proposal, reports, presentation slides
 ├─ data/                # sample grid maps or test cases

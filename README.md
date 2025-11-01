@@ -34,15 +34,33 @@ This project aims to:
 ## 🗂️ Repository Structure
 ```
 project/
-├─ src/                 # source code for all algorithms
-│  ├─ algorithms/jps.py
-│  ├─ core/utils.py
-│  ├─ visualizations/charts.py
-│  └─ main.py
-├─ results/             # experiment results and performance logs
-├─ docs/                # proposal, reports, presentation slides
-├─ data/                # sample grid maps or test cases
-└─ README.md
+├── src/                     # Source code for all algorithms
+│   ├── algorithms/          # Pathfinding algorithm implementations
+│   │   ├── astar.py         # A* baseline algorithm
+│   │   ├── dijkstra.py      # Dijkstra baseline algorithm
+│   │   ├── dfs.py           # Depth-First Search baseline
+│   │   └── jps.py           # Jump Point Search (JPS) implementation
+│   ├── core/                # Shared components
+│   │   ├── grid.py          # Grid representation and movement rules
+│   │   ├── heuristics.py    # Heuristic functions (Manhattan, Octile, etc.)
+│   │   └── utils.py         # Utility functions (logging, timers, helpers)
+│   ├── visualizations/      # Visualization and performance analysis
+│   │   └── charts.py        # Plots for runtime, node expansions, path cost
+│   └── main.py              # Entry point to run and compare algorithms
+│
+├── data/                    # Sample grid maps and test cases
+│   └── maps/                # Example .txt or .csv grid files
+│
+├── results/                 # Experiment outputs, logs, and performance data
+│   ├── logs/                # Raw runtime and node expansion logs
+│   └── figures/             # Generated charts and comparison graphs
+│
+├── docs/                    # Documentation and reports
+│   ├── proposal.pdf         # Submitted project proposal
+│   ├── report_draft.docx    # In-progress final report
+│   └── slides.pptx          # Presentation slides
+│
+└── README.md                # Project overview and usage instructions
 ```
 
 ---

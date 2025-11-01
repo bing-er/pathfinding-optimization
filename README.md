@@ -1,33 +1,36 @@
+<div align="center">
+
 # 🚀 Pathfinding Algorithms Comparison
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-green.svg)]()
 [![Status](https://img.shields.io/badge/Status-In%20Progress-yellow.svg)]()
 
-This repository contains our group project for **COMP 9060 – Advanced Algorithms**, comparing classical and optimized pathfinding algorithms: **A\***, **Dijkstra**, **DFS**, and **JPS (Jump Point Search)**.  
-The study focuses on **performance**, **path optimality**, and **efficiency** across different grid-based environments.
+</div>
+
+This repository contains our group project for *COMP 9060 – Advanced Algorithms*, comparing classical and optimized pathfinding algorithms: **A\***, **Dijkstra**, **DFS**, and **JPS (Jump Point Search)**.  
+The study focuses on performance, path optimality, and efficiency across different grid-based environments.
 
 ---
 
 ## 👥 Team Members
 | Name | Role |
 |------|------|
-| **a** | Research & Implementation |
-| **b** | Proposal Writing & Documentation |
-| **c** | Algorithm Design & JPS Implementation |
-| **d** | Baseline Testing & Performance Evaluation |
+| **a** | Algorithm Developer – A*, Dijkstra, DFS Implementation |
+| **b** | QA & Testing Lead – JPS Implementation and Integration |
+| **c** | Evaluation Lead – Metrics Analysis and Visualization |
+| **d** | Project Manager – Documentation, Reporting, and Presentation |
 
 ---
 
 ## 🎯 Project Overview
-Pathfinding is a fundamental problem in AI and robotics.  
+Pathfinding is a fundamental problem in AI, robotics, and game development.
 This project aims to:
-- Implement **A\***, **Dijkstra**, **DFS**, and **JPS** algorithms.
-- Evaluate their performance on various **grid maps**.
-- Measure **computation time**, **path length**, and **scalability**.
-- Visualize algorithm behavior for better comparison.
-
-**Jump Point Search (JPS)** improves A\* by skipping redundant nodes in uniform grids, significantly reducing search time while maintaining optimality.
+- Implement **A***, **Dijkstra**, **DFS**, and **JPS** algorithms in a common grid framework.
+- Evaluate their performance on various **grid configurations** (sparse vs dense, small vs large).
+- Measure **runtime**, **path cost**, and **node expansions** to analyze algorithmic efficiency.
+- Visualize algorithm behavior through comparative charts and heatmaps.
+**Jump Point Search (JPS)** improves **A*** by **skipping redundant nodes** in uniform-cost grids, reducing runtime while preserving optimal path cost.
 
 ---
 
@@ -69,25 +72,33 @@ project/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/bing-er/pathfinding-optimization.git
+cd pathfinding-iptimization
 ```
 
 ### 2. Set Up Environment
-```python3 -m venv venv
-source venv/bin/activate      # or venv\Scripts\activate on Windows
+```
+python3 -m venv venv
+source venv/bin/activate        # (Mac/Linux)
+venv\Scripts\activate           # (Windows)
 pip install -r requirements.txt
 ```
 
 ### 3. Run Algorithms
-```python src/a_star.py
-python src/dijkstra.py
-python src/dfs.py
-python src/jps.py
+Run individual algorithms:
 ```
-
+python src/algorithms/astar.py
+python src/algorithms/dijkstra.py
+python src/algorithms/dfs.py
+python src/algorithms/jps.py
+```
+Or compare all from the main runner:
+```
+python src/main.py
+```
 ### 4. Visualize Results
-Generated logs and visualizations will appear in the results/ folder.
+Generated logs and performance visualizations will appear in the results/ folder.
+You can adjust grid size, obstacle density, or heuristic type in main.py.
 
 ### 📊 Evaluation Metrics
 
@@ -101,25 +112,23 @@ Generated logs and visualizations will appear in the results/ folder.
 
 ## 🗓️ Project Timeline
 
-| Milestone                   | Due Date     |
-| --------------------------- | ------------ |
-| Proposal Submission         | Oct 21, 2025 |
-| Midterm Progress Review     | Nov 10, 2025 |
-| Final Report & Presentation | Dec 2, 2025  |
+| Milestone                                  | Due Date     |
+| ------------------------------------------ | ------------ |
+| Proposal Submission                        | Oct 21, 2025 |
+| Implementation Phase (A*, Dijkstra, JPS)** | Nov 10, 2025 |
+| Final Report & Presentation                | Dec 2, 2025  |
 
 
 ### 🧠 Visualization Example
 
 ## License
 
-This project is for educational purposes only under the BCIT course COMP XXXX.
+This project is developed for **educational purposes** under the **BCIT COMP 9060 – Applied Algorithm Analysis course.
 Licensed under the MIT License
 
-### 🔗 Useful Links
+### 🔗 **Useful Links**
 
-📘 Overleaf Proposal
-
-🗂️ GitHub Project Board
-
-📊 Results Dashboard (optional)
-
+- 📘 [Overleaf Proposal](https://www.overleaf.com/project/68f7c8bb19ca6a542e10049d)
+- 📄 [Overleaf Final Report](https://www.overleaf.com/project/68f7ed08691b69b5859774ee)  
+- 🗂️ [GitHub Project Board](https://github.com/bing-er/pathfinding-optimization)  
+- 📊 [Results Dashboard (optional)](https://colab.research.google.com/drive/your-dashboard-link)

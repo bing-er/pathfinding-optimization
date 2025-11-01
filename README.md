@@ -131,4 +131,4 @@ Licensed under the MIT License
 - 📘 [Overleaf Proposal](https://www.overleaf.com/project/68f7c8bb19ca6a542e10049d)
 - 📄 [Overleaf Final Report](https://www.overleaf.com/project/68f7ed08691b69b5859774ee)  
 - 🗂️ [GitHub Project Board](https://github.com/bing-er/pathfinding-optimization)  
-- 📊 [Results Dashboard (optional)](https://colab.research.google.com/drive/your-dashboard-link)
+- 📊 [Results Dashboard

@@ -115,7 +115,7 @@ You can adjust grid size, obstacle density, or heuristic type in main.py.
 | Milestone                                  | Due Date     |
 | ------------------------------------------ | ------------ |
 | Proposal Submission                        | Oct 21, 2025 |
-| Implementation Phase (A*, Dijkstra, JPS)** | Nov 10, 2025 |
+| Implementation Phase (A*, Dijkstra, JPS)** | Nov 8, 2025  |
 | Final Report & Presentation                | Dec 2, 2025  |
 
 
@@ -126,7 +126,7 @@ You can adjust grid size, obstacle density, or heuristic type in main.py.
 
 ## 📜 License
 
-This project is developed for **educational purposes** under the **BCIT COMP 9060 – Advanced Algorithm Analysis** course.  
+This project is developed for **educational purposes** under the **BCIT COMP 9060 – Applied Algorithm Analysis** course.  
 Licensed under the [MIT License](LICENSE).
 
 ---

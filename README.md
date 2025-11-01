@@ -123,7 +123,7 @@ You can adjust grid size, obstacle density, or heuristic type in main.py.
 
 ## License
 
-This project is developed for **educational purposes** under the **BCIT COMP 9060 – Applied Algorithm Analysis course.
+This project is developed for **educational purposes** under the **BCIT COMP 9060 – Applied Algorithm Analysis** course.
 Licensed under the MIT License
 
 ### 🔗 **Useful Links**

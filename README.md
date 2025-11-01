@@ -119,16 +119,21 @@ You can adjust grid size, obstacle density, or heuristic type in main.py.
 | Final Report & Presentation                | Dec 2, 2025  |
 
 
-### 🧠 Visualization Example
+## 🧠 Visualization Example
+*(Example figures of algorithm comparisons will be added after performance testing.)*
 
-## License
+---
 
-This project is developed for **educational purposes** under the **BCIT COMP 9060 – Applied Algorithm Analysis** course.
-Licensed under the MIT License
+## 📜 License
+
+This project is developed for **educational purposes** under the **BCIT COMP 9060 – Advanced Algorithm Analysis** course.  
+Licensed under the [MIT License](LICENSE).
+
+---
 
 ### 🔗 **Useful Links**
 
-- 📘 [Overleaf Proposal](https://www.overleaf.com/project/68f7c8bb19ca6a542e10049d)
-- 📄 [Overleaf Final Report](https://www.overleaf.com/project/68f7ed08691b69b5859774ee)  
-- 🗂️ [GitHub Project Board](https://github.com/bing-er/pathfinding-optimization)  
-- 📊 [Results Dashboard
+- 📘 [Overleaf Proposal](https://www.overleaf.com/read/your-proposal-link)  
+- 📄 [Overleaf Final Report](https://www.overleaf.com/read/your-final-report-link)  
+- 🗂️ [GitHub Project Board](https://github.com/yourusername/COMP9060-Pathfinding-Optimization/projects)  
+- 📊 [Results Dashboard (optional)](https://colab.research.google.com/drive/your-dashboard-link)

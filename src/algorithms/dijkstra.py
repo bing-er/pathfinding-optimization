@@ -1,3 +1,8 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.colors import ListedColormap
+import random
+from typing import List, Tuple
 # --------------------------
 # 6. Maze Solving with Dijkstra's Algorithm
 # --------------------------
@@ -76,3 +81,4 @@ def solve_maze_dijkstra(maze: np.ndarray, start: Tuple[int, int], end: Tuple[int
     
     # No path found
     return []
+

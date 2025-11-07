@@ -11,7 +11,6 @@
 This repository contains our group project for *COMP 9060 – Advanced Algorithms*, comparing classical and optimized pathfinding algorithms: **A\***, **Dijkstra**, **DFS**, and **JPS (Jump Point Search)**.  
 The study focuses on performance, path optimality, and efficiency across different grid-based environments.
 
----
 
 ## 👥 Team Members
 | Name | Role |
@@ -21,7 +20,6 @@ The study focuses on performance, path optimality, and efficiency across differe
 | **c** | Evaluation Lead – Metrics Analysis and Visualization |
 | **d** | Project Manager – Documentation, Reporting, and Presentation |
 
----
 
 ## 🎯 Project Overview
 Pathfinding is a fundamental problem in AI, robotics, and game development.
@@ -32,7 +30,6 @@ This project aims to:
 - Visualize algorithm behavior through comparative charts and heatmaps.
 **Jump Point Search (JPS)** improves **A*** by **skipping redundant nodes** in uniform-cost grids, reducing runtime while preserving optimal path cost.
 
----
 
 ## 🗂️ Repository Structure
 ```
@@ -66,7 +63,6 @@ project/
 └── README.md                # Project overview and usage instructions
 ```
 
----
 
 ## ⚙️ Getting Started
 
@@ -122,18 +118,16 @@ You can adjust grid size, obstacle density, or heuristic type in main.py.
 ## 🧠 Visualization Example
 *(Example figures of algorithm comparisons will be added after performance testing.)*
 
----
 
 ## 📜 License
 
 This project is developed for **educational purposes** under the **BCIT COMP 9060 – Applied Algorithm Analysis** course.  
 Licensed under the [MIT License](LICENSE).
 
----
 
 ### 🔗 **Useful Links**
 
-- 📘 [Overleaf Proposal](https://www.overleaf.com/read/your-proposal-link)  
-- 📄 [Overleaf Final Report](https://www.overleaf.com/read/your-final-report-link)  
+- 📘 [Overleaf Proposal](https://www.overleaf.com/9465635879vhhjjwjkmhzk#37ad93)  
+- 📄 [Overleaf Final Report](https://www.overleaf.com/6623247675ghmpxqtkrbhc#20506f)  
 - 🗂️ [GitHub Project Board](https://github.com/yourusername/COMP9060-Pathfinding-Optimization/projects)  
 - 📊 [Results Dashboard (optional)](https://colab.research.google.com/drive/your-dashboard-link)

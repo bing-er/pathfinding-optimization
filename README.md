@@ -39,13 +39,15 @@ project/
 │   │   ├── astar.py         # A* baseline algorithm
 │   │   ├── dijkstra.py      # Dijkstra baseline algorithm
 │   │   ├── dfs.py           # Depth-First Search baseline
-│   │   └── jps.py           # Jump Point Search (JPS) implementation
+│   │   ├── jps.py           # Jump Point Search (JPS) implementation
+│   │   └── mazegenerator.py # 
 │   ├── core/                # Shared components
 │   │   ├── grid.py          # Grid representation and movement rules
 │   │   ├── heuristics.py    # Heuristic functions (Manhattan, Octile, etc.)
 │   │   └── utils.py         # Utility functions (logging, timers, helpers)
 │   ├── visualizations/      # Visualization and performance analysis
-│   │   └── charts.py        # Plots for runtime, node expansions, path cost
+│   │   ├── charts.py        # Plots for runtime, node expansions, path cost
+│   │   └── runtime.py       # 
 │   └── main.py              # Entry point to run and compare algorithms
 │
 ├── data/                    # Sample grid maps and test cases

@@ -33,33 +33,35 @@ This project aims to:
 
 ## 🗂️ Repository Structure
 ```
-project/
+pathfinding-optimization/
+├── data/                    # Sample grid maps and test cases
+│   └── maps/                # Example .txt or .csv grid files
+├── docs/                    # Documentation and reports
+│   ├── proposal.pdf         # Submitted project proposal
+│   ├── report_draft.docx    # In-progress final report
+│   └── slides.pptx          # Presentation slides
+├── notebooks/                       # Jupyter notebooks for experiments and demos
+│   ├── 01_astar_demo.ipynb          # Interactive A* pathfinding demo
+│   ├── 02_dijkstra_runtime.ipynb    # Runtime analysis for Dijkstra’s algorithm
+│   └── 03_visualization_tests.ipynb # Prototyping plots/heatmaps before moving to src/
+├── results/                 # Experiment outputs, logs, and performance data
+│   ├── figures/             # Generated charts and comparison graphs
+│   └── logs/                # Raw runtime and node expansion logs
 ├── src/                     # Source code for all algorithms
 │   ├── algorithms/          # Pathfinding algorithm implementations
 │   │   ├── astar.py         # A* baseline algorithm
-│   │   ├── dijkstra.py      # Dijkstra baseline algorithm
 │   │   ├── dfs.py           # Depth-First Search baseline
-│   │   └── jps.py           # Jump Point Search (JPS) implementation
+│   │   ├── dijkstra.py      # Dijkstra baseline algorithm
+│   │   ├── jps.py           # Jump Point Search (JPS) implementation
+│   │   └── mazegenerator.py # DFS-based random maze generator
 │   ├── core/                # Shared components
 │   │   ├── grid.py          # Grid representation and movement rules
 │   │   ├── heuristics.py    # Heuristic functions (Manhattan, Octile, etc.)
 │   │   └── utils.py         # Utility functions (logging, timers, helpers)
 │   ├── visualizations/      # Visualization and performance analysis
-│   │   └── charts.py        # Plots for runtime, node expansions, path cost
+│   │   ├── charts.py        # Static plots for paths and metrics
+│   │   └── runtime_plot.py  # Search-progress / runtime-steps plots
 │   └── main.py              # Entry point to run and compare algorithms
-│
-├── data/                    # Sample grid maps and test cases
-│   └── maps/                # Example .txt or .csv grid files
-│
-├── results/                 # Experiment outputs, logs, and performance data
-│   ├── logs/                # Raw runtime and node expansion logs
-│   └── figures/             # Generated charts and comparison graphs
-│
-├── docs/                    # Documentation and reports
-│   ├── proposal.pdf         # Submitted project proposal
-│   ├── report_draft.docx    # In-progress final report
-│   └── slides.pptx          # Presentation slides
-│
 └── README.md                # Project overview and usage instructions
 ```
 

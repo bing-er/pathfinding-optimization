@@ -15,10 +15,10 @@ The study focuses on performance, path optimality, and efficiency across differe
 ## 👥 Team Members
 | Name | Role |
 |------|------|
-| **a** | Algorithm Developer – A*, Dijkstra, DFS Implementation |
-| **b** | QA & Testing Lead – JPS Implementation and Integration |
-| **c** | Evaluation Lead – Metrics Analysis and Visualization |
-| **d** | Project Manager – Documentation, Reporting, and Presentation |
+| **Yansong** | Algorithm Developer – A*, Dijkstra, DFS Implementation |
+| **Sepehr** | QA & Testing Lead – JPS Implementation and Integration |
+| **Vibhor** | Evaluation Lead – Metrics Analysis and Visualization |
+| **Binger** | Project Manager – Documentation, Reporting, and Presentation |
 
 
 ## 🎯 Project Overview

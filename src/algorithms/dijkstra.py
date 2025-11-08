@@ -1,8 +1,13 @@
+# src/algorithms/dijkstra.py
+import heapq
+
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
 import random
-from typing import List, Tuple
+from typing import List, Tuple, Dict
+
+
 # --------------------------
 # 6. Maze Solving with Dijkstra's Algorithm
 # --------------------------
@@ -42,7 +47,7 @@ def solve_maze_dijkstra(maze: np.ndarray, start: Tuple[int, int], end: Tuple[int
     processed = set()
     
     while priority_queue:
-        # Get node with smallest known distance
+        # Get node with the smallest known distance
         current_dist, current_y, current_x = heapq.heappop(priority_queue)
         
         # Check if we've reached the end

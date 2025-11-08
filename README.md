@@ -105,6 +105,12 @@ You can adjust grid size, obstacle density, or heuristic type in main.py.
 | **Node Expansions**  | Number of explored nodes         |
 | **Scalability**      | Performance on larger grid maps  |
 
+### 🧭 Progress Summary (Week 10 – Midterm Status)
+By Week 10, our team has completed the baseline phase of the project. The core pathfinding algorithms — **A***, **Dijkstra**, and **DFS** — have all been implemented, tested, and merged into the main branch. We also added a **maze generator** to help us create consistent test grids for experiments.
+
+The repository is now fully organized with a clear folder structure, evaluation metrics, and documentation. Everyone’s roles are defined — **Yansong** handled the baseline algorithms, **Sepehr** is leading the **Jump Point Search (JPS)** development, **Vibhor** is focusing on evaluation and visualization, and **Binger** is managing documentation, scheduling, and overall coordination.
+
+Our next milestone is to integrate and test **JPS**, comparing its performance against the baseline algorithms. The team will also begin logging runtime and node-expansion data and preparing visual outputs for comparison. In the following weeks, we’ll move toward compiling the final report, creating visuals, and getting ready for our presentation in Week **14 (Dec 2)**.
 
 ## 🗓️ Project Timeline
 

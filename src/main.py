@@ -1,4 +1,3 @@
-# src/main.py
 """
 Main entry point for the Pathfinding Algorithms Comparison project.
 Author: Binger Yu
@@ -20,6 +19,7 @@ from core.utils import log_results, format_path
 from algorithms.astar import solve_maze_a_star
 from algorithms.dijkstra import solve_maze_dijkstra
 from algorithms.dfs import solve_maze_dfs
+from algorithms.jps import solve_maze_jps
 from algorithms.mazegenerator import generate_maze_dfs
 
 # Project root = parent of src/
@@ -40,9 +40,9 @@ def main() -> None:
     )
     parser.add_argument(
         "--algo",
-        choices=["astar", "dijkstra", "dfs"],
+        choices=["astar", "dijkstra", "dfs", "jps"],  # Added JPS
         default="astar",
-        help="Algorithm to run (astar, dijkstra, dfs)",
+        help="Algorithm to run (astar, dijkstra, dfs, jps)",
     )
     parser.add_argument(
         "--size",
@@ -59,6 +59,11 @@ def main() -> None:
         "--animate",
         action="store_true",
         help="Animate the path being drawn step-by-step",
+    )
+    parser.add_argument(
+        "--compare",
+        action="store_true",
+        help="Compare all algorithms on the same grid",
     )
     args = parser.parse_args()
 
@@ -88,73 +93,156 @@ def main() -> None:
     # 2. Show the grid in text
     print("\n Generated Grid:")
     print_grid(grid)
-    print(f"\n Running {args.algo.upper()} from {start} → {goal}\n")
+    print(f"\n Start: {start}, Goal: {goal}\n")
 
-    # 3. Run selected algorithm and measure runtime
-    t0 = time.time()
+    # 3. Run algorithm comparison or single algorithm
+    if args.compare:
+        # Compare all algorithms on the same grid
+        print("🎯 Comparing All Algorithms on Same Grid")
+        print("=" * 50)
 
-    if args.algo == "astar":
-        path, steps = solve_maze_a_star(grid, start, goal)
-    elif args.algo == "dijkstra":
-        path = solve_maze_dijkstra(grid, start, goal)
-        steps = []
-    elif args.algo == "dfs":
-        path = solve_maze_dfs(grid, start, goal)
-        steps = []
+        algorithms = {
+            "A*": lambda: solve_maze_a_star(grid, start, goal),
+            "Dijkstra": lambda: (solve_maze_dijkstra(grid, start, goal), []),
+            "DFS": lambda: (solve_maze_dfs(grid, start, goal), []),
+            "JPS": lambda: solve_maze_jps(grid, start, goal)
+        }
 
-    runtime = time.time() - t0
+        results = {}
 
-    # 4. Print result, log metrics, and visualize
-    if path:
-        print("Path found:")
-        print(format_path(path))
-        print(f"Path length: {len(path)} steps")
-        print(f"Runtime: {runtime:.6f} seconds")
+        for name, algo_func in algorithms.items():
+            print(f"\nRunning {name}...")
+            t0 = time.time()
 
-        # Log metrics to CSV (utils.py handles the path)
-        log_results(
-            algorithm=args.algo.upper(),
-            grid_size=int(grid.shape[0]),
-            runtime=runtime,
-            path_length=len(path),
-            cost=None,
-        )
+            try:
+                result = algo_func()
+                if len(result) == 2:
+                    path, steps = result
+                else:
+                    path, steps = result, []
+            except Exception as e:
+                print(f"Error running {name}: {e}")
+                continue
 
-        # Save static figure
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        algo_name = args.algo.lower()
+            runtime = time.time() - t0
 
-        FIGURES_DIR.mkdir(parents=True, exist_ok=True)
-        filename = FIGURES_DIR / f"{algo_name}_{timestamp}.png"
+            results[name] = {
+                'path': path,
+                'steps': steps,
+                'runtime': runtime,
+                'path_length': len(path) if path else 0
+            }
 
-        title = f"{args.algo.upper()} (length={len(path)})"
-        plot_maze_with_path(
-            grid,
-            path,
-            start,
-            goal,
-            title,
-            save_path=str(filename),  # matplotlib expects a string
-        )
-        print(f"Figure saved to: {filename}")
+            # Print results
+            if path:
+                print(f"  ✅ Path found: {len(path)} steps in {runtime:.6f}s")
+            else:
+                print(f"  ❌ No path found (took {runtime:.6f}s)")
 
-        # Running-steps graph (only for algorithms that return steps, i.e. A*)
-        if steps:
-            plot_steps_curve(steps, algo_name=args.algo.upper())
+        # Summary table
+        print(f"\n📊 Comparison Summary:")
+        print("-" * 60)
+        print(f"{'Algorithm':<12} {'Success':<8} {'Path Length':<12} {'Runtime (s)':<12}")
+        print("-" * 60)
 
-        # Optional animation (only if user asks for it)
-        if args.animate:
-            animate_maze_with_path(
+        for name, result in results.items():
+            success = "✅" if result['path'] else "❌"
+            path_len = result['path_length'] if result['path'] else "N/A"
+            runtime = f"{result['runtime']:.6f}"
+            print(f"{name:<12} {success:<8} {path_len:<12} {runtime:<12}")
+
+        print("-" * 60)
+
+        # Save visualization for best performing algorithm
+        best_algo = min([name for name, r in results.items() if r['path']],
+                        key=lambda x: results[x]['runtime'], default=None)
+
+        if best_algo:
+            print(f"\n🏆 Fastest algorithm: {best_algo}")
+            path = results[best_algo]['path']
+
+            # Save comparison figure
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            FIGURES_DIR.mkdir(parents=True, exist_ok=True)
+            filename = FIGURES_DIR / f"comparison_{timestamp}.png"
+
+            title = f"Best: {best_algo} (length={len(path)})"
+            plot_maze_with_path(
+                grid, path, start, goal, title, save_path=str(filename)
+            )
+            print(f"Comparison figure saved to: {filename}")
+
+    else:
+        # Run single algorithm
+        print(f"Running {args.algo.upper()} from {start} → {goal}\n")
+
+        # 4. Run selected algorithm and measure runtime
+        t0 = time.time()
+
+        if args.algo == "astar":
+            path, steps = solve_maze_a_star(grid, start, goal)
+        elif args.algo == "dijkstra":
+            path = solve_maze_dijkstra(grid, start, goal)
+            steps = []
+        elif args.algo == "dfs":
+            path = solve_maze_dfs(grid, start, goal)
+            steps = []
+        elif args.algo == "jps":
+            path, steps = solve_maze_jps(grid, start, goal)
+
+        runtime = time.time() - t0
+
+        # 5. Print result, log metrics, and visualize
+        if path:
+            print("Path found:")
+            print(format_path(path))
+            print(f"Path length: {len(path)} steps")
+            print(f"Runtime: {runtime:.6f} seconds")
+
+            # Log metrics to CSV (utils.py handles the path)
+            log_results(
+                algorithm=args.algo.upper(),
+                grid_size=int(grid.shape[0]),
+                runtime=runtime,
+                path_length=len(path),
+                cost=None,
+            )
+
+            # Save static figure
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            algo_name = args.algo.lower()
+
+            FIGURES_DIR.mkdir(parents=True, exist_ok=True)
+            filename = FIGURES_DIR / f"{algo_name}_{timestamp}.png"
+
+            title = f"{args.algo.upper()} (length={len(path)})"
+            plot_maze_with_path(
                 grid,
                 path,
                 start,
                 goal,
-                title=f"{args.algo.upper()} – animated path",
-                pause_time=0.05,  # smaller = faster animation
+                title,
+                save_path=str(filename),  # matplotlib expects a string
             )
+            print(f"Figure saved to: {filename}")
 
-    else:
-        print("No path found!")
+            # Running-steps graph (only for algorithms that return steps, i.e. A* and JPS)
+            if steps:
+                plot_steps_curve(steps, algo_name=args.algo.upper())
+
+            # Optional animation (only if user asks for it)
+            if args.animate:
+                animate_maze_with_path(
+                    grid,
+                    path,
+                    start,
+                    goal,
+                    title=f"{args.algo.upper()} – animated path",
+                    pause_time=0.05,  # smaller = faster animation
+                )
+
+        else:
+            print("No path found!")
 
 
 if __name__ == "__main__":

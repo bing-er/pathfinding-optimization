@@ -107,24 +107,72 @@ You can adjust grid size, obstacle density, or heuristic type in main.py.
 | **Node Expansions**  | Number of explored nodes         |
 | **Scalability**      | Performance on larger grid maps  |
 
-### 🧭 Progress Summary (Week 10 – Midterm Status)
+## 🧭 Progress Summary 
+### Week 10 – Midterm Status
 By Week 10, our team has completed the baseline phase of the project. The core pathfinding algorithms — **A***, **Dijkstra**, and **DFS** — have all been implemented, tested, and merged into the main branch. We also added a **maze generator** to help us create consistent test grids for experiments.
 
 The repository is now fully organized with a clear folder structure, evaluation metrics, and documentation. Everyone’s roles are defined — **Yansong** handled the baseline algorithms, **Sepehr** is leading the **Jump Point Search (JPS)** development, **Vibhor** is focusing on evaluation and visualization, and **Binger** is managing documentation, scheduling, and overall coordination.
 
 Our next milestone is to integrate and test **JPS**, comparing its performance against the baseline algorithms. The team will also begin logging runtime and node-expansion data and preparing visual outputs for comparison. In the following weeks, we’ll move toward compiling the final report, creating visuals, and getting ready for our presentation in Week **14 (Dec 2)**.
 
-## 🗓️ Project Timeline
+### Week 11 - Post-Integration Update
+By **Week 11**, our team successfully completed the **integration phase** of the Pathfinding Optimization project. All four pathfinding algorithms — **A***, **Dijkstra**, **DFS**, and **JPS** — have now been implemented, tested, and unified under a consistent framework.
 
-| Milestone                                  | Due Date     |
-| ------------------------------------------ | ------------ |
-| Proposal Submission                        | Oct 21, 2025 |
-| Implementation Phase (A*, Dijkstra, JPS)** | Nov 8, 2025  |
-| Final Report & Presentation                | Dec 2, 2025  |
+The repository is fully functional and organized, supporting reproducible experiments, runtime logging, and visualization for performance comparison.
+
+**🧠 Highlights**
+* **JPS** algorithm finalized and merged into the main branch.
+* **Runtime visualization notebooks** and early performance plots demonstrated in the team meeting.
+* **Unified main runner** implemented for all algorithms.
+* **Automatic saving of runtime data and figures** into the structured results folders.
+* **Enhanced maze generation and visualization** integrated into the main workflow.
+
+#### 👥 Team Contributions
+**🧠 Yansong**
+* Implemented and verified the **A***, **Dijkstra**, and **DFS** baseline algorithms.
+* Ensured algorithm correctness, consistent output, and optimal-path validation.
+* Assisted in integration testing and aligning algorithm interfaces.
+
+**⚙️ Sepehr**
+* Finalized the **Jump Point Search (JPS)** algorithm with jump + pruning logic.
+* Verified performance improvements and integrated JPS into the shared framework.
+* Supported testing and comparison with baseline algorithms.
+
+**📊 Vibhor**
+* Developed and pushed **Jupyter Notebooks** for runtime and node-expansion visualization.
+* Produced early plots for comparative performance during the team review.
+* Helped design the runtime / data-logging system for consistency across algorithms.
+
+**🧩 Binger**
+* Implemented the **main runner** (`main.py`) for unified algorithm execution.
+* Developed **utility functions** (`utils.py`) for logging, path formatting, and file management.
+* Created **visualization modules** (`charts.py`, `runtime_plot.py`) for static and animated results.
+* Enhanced **maze generator** (`mazegenerator.py`) with `get_maze()` and `show_maze()` functions for live visualization.
+* Configured automatic saving of results to:
+  * `results/figures/` – generated charts
+  * `results/logs/` – runtime and node-expansion logs
+* Designed and organized the complete repository structure (`data/`, `docs/`, `notebooks/`, `results/`, `src/`).
+* Integrated all modules into a reproducible workflow for testing, visualization, and documentation.
+
+## 📅 Next Milestones
+* Conduct performance testing on larger grid sizes (21×21, 51×51, 101×101).
+* Analyze runtime, path length, and node expansions for all algorithms.
+* Finalize visualization outputs and integrate comparison figures.
+* Begin drafting the **final report** and **presentation slides** for submission (Week 14 – Dec 2, 2025).
+
+
+## 📅 Updated Project Timeline
+
+| **Milestone** | **Due Date** | **Status** |
+|----------------|--------------|-------------|
+| Proposal Submission | Oct 21, 2025 | ✅ Submitted |
+| Implementation Phase (A*, Dijkstra, DFS, JPS) | Nov 8, 2025 | ✅ Completed |
+| Performance Testing + Visualization | Nov 18, 2025 | 🧩 In Progress |
+| Final Report & Presentation | Dec 2, 2025 | ⏳ Upcoming |
 
 
 ## 🧠 Visualization Example
-*(Example figures of algorithm comparisons will be added after performance testing.)*
+*(Runtime-comparison and search-progress figures will be added after completing batch experiments.)*
 
 
 ## 📜 License

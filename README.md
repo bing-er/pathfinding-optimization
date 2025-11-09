@@ -144,15 +144,11 @@ The repository is fully functional and organized, supporting reproducible experi
 * Helped design the runtime / data-logging system for consistency across algorithms.
 
 **🧩 Binger**
-* Implemented the **main runner** (`main.py`) for unified algorithm execution.
-* Developed **utility functions** (`utils.py`) for logging, path formatting, and file management.
-* Created **visualization modules** (`charts.py`, `runtime_plot.py`) for static and animated results.
-* Enhanced **maze generator** (`mazegenerator.py`) with `get_maze()` and `show_maze()` functions for live visualization.
-* Configured automatic saving of results to:
-  * `results/figures/` – generated charts
-  * `results/logs/` – runtime and node-expansion logs
-* Designed and organized the complete repository structure (`data/`, `docs/`, `notebooks/`, `results/`, `src/`).
-* Integrated all modules into a reproducible workflow for testing, visualization, and documentation.
+* Implemented the **main runner** (`main.py`) with unified execution and `--compare` mode for algorithm benchmarking.
+* Developed **logging and visualization tools** (`utils.py`, `charts.py`, `runtime_plot.py`) for runtime and path analysis.
+* Enhanced **maze generator** (`mazegenerator.py`) to ensure consistent grids across algorithms.
+* Configured automatic saving to `results/figures`/ and `results/logs/` for reproducible experiments.
+* Organized and maintained the full repository structure for seamless testing and visualization.
 
 ## 📅 Next Milestones
 * Conduct performance testing on larger grid sizes (21×21, 51×51, 101×101).

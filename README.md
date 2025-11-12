@@ -154,7 +154,7 @@ The repository is fully functional and organized, supporting reproducible experi
 * Documented Week 11 progress and coordinated next-phase performance testing assignments.
 
 ## 📅 Next Milestones
-* Conduct batch tests on grid sizes **21×21**, **51×51**, and **101×101**.
+* Conduct batch tests on grid sizes **31×31**, **61×61**, and **91×91**.
 * Collect runtime, path length, and node-expansion data across all algorithms.
 * Finalize **comparison plots** and integrate them into the final report.
 * Begin drafting **final report and presentation slides** (Nov 22 – Dec 2).

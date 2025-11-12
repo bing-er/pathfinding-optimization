@@ -109,7 +109,7 @@ You can adjust grid size, obstacle density, or heuristic type in main.py.
 
 ## 🧭 Progress Summary 
 ### Week 10 – Midterm Status
-By Week 10, our team has completed the baseline phase of the project. The core pathfinding algorithms — **A***, **Dijkstra**, and **DFS** — have all been implemented, tested, and merged into the main branch. We also added a **maze generator** to help us create consistent test grids for experiments.
+By Week 11, the team successfully completed integration and began the **performance testing and visualization phase**. All four algorithms (A*, Dijkstra, DFS, JPS) now run under a unified framework, and the testing plan for runtime and node-expansion benchmarking was finalized.
 
 The repository is now fully organized with a clear folder structure, evaluation metrics, and documentation. Everyone’s roles are defined — **Yansong** handled the baseline algorithms, **Sepehr** is leading the **Jump Point Search (JPS)** development, **Vibhor** is focusing on evaluation and visualization, and **Binger** is managing documentation, scheduling, and overall coordination.
 
@@ -126,6 +126,10 @@ The repository is fully functional and organized, supporting reproducible experi
 * **Unified main runner** implemented for all algorithms.
 * **Automatic saving of runtime data and figures** into the structured results folders.
 * **Enhanced maze generation and visualization** integrated into the main workflow.
+* **Performance testing plan finalized** (grid sizes 10×10 → 101×101, sparse vs dense).
+* **Visualization notebooks updated** for runtime and node-expansion analysis.
+* **Vibhor’s benchmark suite integrated** under notebooks/ for automated comparison.
+* **Team reviewed results via meeting (Nov 11, 2025)** — confirmed consistent outputs, JPS shows fewer steps but slightly higher runtime.
 
 #### 👥 Team Contributions
 **🧠 Yansong**
@@ -139,9 +143,9 @@ The repository is fully functional and organized, supporting reproducible experi
 * Supported testing and comparison with baseline algorithms.
 
 **📊 Vibhor**
-* Developed and pushed **Jupyter Notebooks** for runtime and node-expansion visualization.
-* Produced early plots for comparative performance during the team review.
-* Helped design the runtime / data-logging system for consistency across algorithms.
+* Finalized and pushed **benchmark testing notebooks** (maze_benchmark_corners.ipynb, .py, .html).
+* Designed runtime and path-length comparison plan for all algorithms.
+* Coordinated visualization data pipeline for performance analysis.
 
 **🧩 Binger**
 * Implemented the **main runner** (`main.py`) with unified execution and `--compare` mode for algorithm benchmarking.
@@ -149,6 +153,8 @@ The repository is fully functional and organized, supporting reproducible experi
 * Enhanced **maze generator** (`mazegenerator.py`) to ensure consistent grids across algorithms.
 * Configured automatic saving to `results/figures`/ and `results/logs/` for reproducible experiments.
 * Organized and maintained the full repository structure for seamless testing and visualization.
+* Reviewed and merged visualization branch (viz_vib) into main.
+* Organized follow-up testing tasks and documented meeting summary for Week 11.
 
 ## 📅 Next Milestones
 * Conduct performance testing on larger grid sizes (21×21, 51×51, 101×101).
@@ -163,7 +169,7 @@ The repository is fully functional and organized, supporting reproducible experi
 |----------------|--------------|-------------|
 | Proposal Submission | Oct 21, 2025 | ✅ Submitted |
 | Implementation Phase (A*, Dijkstra, DFS, JPS) | Nov 8, 2025 | ✅ Completed |
-| Performance Testing + Visualization | Nov 18, 2025 | 🧩 In Progress |
+| Performance Testing + Visualization | Nov 18, 2025 | ✅ Started (Nov 11 Meeting) |
 | Final Report & Presentation | Dec 2, 2025 | ⏳ Upcoming |
 
 

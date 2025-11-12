@@ -109,58 +109,55 @@ You can adjust grid size, obstacle density, or heuristic type in main.py.
 
 ## 🧭 Progress Summary 
 ### Week 10 – Midterm Status
-By Week 11, the team successfully completed integration and began the **performance testing and visualization phase**. All four algorithms (A*, Dijkstra, DFS, JPS) now run under a unified framework, and the testing plan for runtime and node-expansion benchmarking was finalized.
+By Week 10, our team has completed the baseline phase of the project. The core pathfinding algorithms - **A***, **Dijkstra**, and **DFS** - have all been implemented, tested, and merged into the main branch. We also added a maze generator to hlep us create consistent test grids for experiments. 
 
 The repository is now fully organized with a clear folder structure, evaluation metrics, and documentation. Everyone’s roles are defined — **Yansong** handled the baseline algorithms, **Sepehr** is leading the **Jump Point Search (JPS)** development, **Vibhor** is focusing on evaluation and visualization, and **Binger** is managing documentation, scheduling, and overall coordination.
 
 Our next milestone is to integrate and test **JPS**, comparing its performance against the baseline algorithms. The team will also begin logging runtime and node-expansion data and preparing visual outputs for comparison. In the following weeks, we’ll move toward compiling the final report, creating visuals, and getting ready for our presentation in Week **14 (Dec 2)**.
 
-### Week 11 - Post-Integration Update
-By **Week 11**, our team successfully completed the **integration phase** of the Pathfinding Optimization project. All four pathfinding algorithms — **A***, **Dijkstra**, **DFS**, and **JPS** — have now been implemented, tested, and unified under a consistent framework.
+### Week 11 - Transition to Performance Testing
+By **Week 11 (Nov 11, 2025)**, our team completed the **integration phase** and transitioned into the **performance testing and visualization stage** of the Pathfinding Optimization project.
+All four pathfinding algorithms — **A***, **Dijkstra**, **DFS**, and **JPS** — are now unified within a consistent framework, allowing for direct comparison on identical grids.
+The testing plan for runtime, path length, and node-expansion metrics has been finalized, and the visualization framework is now being extended for comparative analysis.
 
 The repository is fully functional and organized, supporting reproducible experiments, runtime logging, and visualization for performance comparison.
 
 **🧠 Highlights**
-* **JPS** algorithm finalized and merged into the main branch.
-* **Runtime visualization notebooks** and early performance plots demonstrated in the team meeting.
-* **Unified main runner** implemented for all algorithms.
-* **Automatic saving of runtime data and figures** into the structured results folders.
-* **Enhanced maze generation and visualization** integrated into the main workflow.
-* **Performance testing plan finalized** (grid sizes 10×10 → 101×101, sparse vs dense).
-* **Visualization notebooks updated** for runtime and node-expansion analysis.
-* **Vibhor’s benchmark suite integrated** under notebooks/ for automated comparison.
-* **Team reviewed results via meeting (Nov 11, 2025)** — confirmed consistent outputs, JPS shows fewer steps but slightly higher runtime.
+* ✅ **All algorithms** **(A***, **Dijkstra**, **DFS**, **JPS)** integrated and verified under `main.py --compare`.
+* ✅ **Performance testing plan finalized** (grid sizes 10×10 → 101×101; obstacle densities 30%, 50%, 70%).
+* ✅ **Consistent maze generation confirmed** using random seed control for reproducible experiments.
+* ✅ **Visualization notebooks updated** to include runtime and node-expansion analyses.
+* ✅ **Benchmark suite** (`maze_benchmark_corners`) integrated for comparative testing.
+* ✅ **Team meeting held (Nov 11)** to review integration results and assign testing responsibilities.
 
 #### 👥 Team Contributions
 **🧠 Yansong**
 * Implemented and verified the **A***, **Dijkstra**, and **DFS** baseline algorithms.
-* Ensured algorithm correctness, consistent output, and optimal-path validation.
-* Assisted in integration testing and aligning algorithm interfaces.
+* Validated path optimality and ensured consistent output formats.
+* Assisted in testing alignment between all algorithm interfaces.
 
 **⚙️ Sepehr**
 * Finalized the **Jump Point Search (JPS)** algorithm with jump + pruning logic.
-* Verified performance improvements and integrated JPS into the shared framework.
-* Supported testing and comparison with baseline algorithms.
+* Verified performance across shared grids and validated output consistency.
+* Supported cross-comparison testing between JPS and baseline algorithms.
 
 **📊 Vibhor**
-* Finalized and pushed **benchmark testing notebooks** (maze_benchmark_corners.ipynb, .py, .html).
-* Designed runtime and path-length comparison plan for all algorithms.
-* Coordinated visualization data pipeline for performance analysis.
+* Developed and pushed **benchmark testing notebooks and scripts** (`maze_benchmark_corners.ipynb`, `.py`, `.html`).
+* Designed the **performance testing plan** for grid sizes and obstacle densities.
+* Implemented **runtime and node-expansion visualization** in Jupyter Notebook.
+* Coordinated with team for data collection and figure generation.
 
 **🧩 Binger**
-* Implemented the **main runner** (`main.py`) with unified execution and `--compare` mode for algorithm benchmarking.
-* Developed **logging and visualization tools** (`utils.py`, `charts.py`, `runtime_plot.py`) for runtime and path analysis.
-* Enhanced **maze generator** (`mazegenerator.py`) to ensure consistent grids across algorithms.
-* Configured automatic saving to `results/figures`/ and `results/logs/` for reproducible experiments.
-* Organized and maintained the full repository structure for seamless testing and visualization.
-* Reviewed and merged visualization branch (viz_vib) into main.
-* Organized follow-up testing tasks and documented meeting summary for Week 11.
+* Implemented and maintained the **main runner** (`main.py`) with unified execution and `--compare` mode.
+* Integrated Vibhor’s visualization branch into `main` and verified functionality.
+* Updated **logging and result management** for consistent output to `results/figures/` and `results/logs/`.
+* Documented Week 11 progress and coordinated next-phase performance testing assignments.
 
 ## 📅 Next Milestones
-* Conduct performance testing on larger grid sizes (21×21, 51×51, 101×101).
-* Analyze runtime, path length, and node expansions for all algorithms.
-* Finalize visualization outputs and integrate comparison figures.
-* Begin drafting the **final report** and **presentation slides** for submission (Week 14 – Dec 2, 2025).
+* Conduct batch tests on grid sizes **21×21**, **51×51**, and **101×101**.
+* Collect runtime, path length, and node-expansion data across all algorithms.
+* Finalize **comparison plots** and integrate them into the final report.
+* Begin drafting **final report and presentation slides** (Nov 22 – Dec 2).
 
 
 ## 📅 Updated Project Timeline

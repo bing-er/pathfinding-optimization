@@ -8,7 +8,7 @@
 
 </div>
 
-This repository contains our group project for *COMP 9060 – Advanced Algorithms*, comparing classical and optimized pathfinding algorithms: **A\***, **Dijkstra**, **DFS**, and **JPS (Jump Point Search)**.  
+This repository contains our group project for *COMP 9060 – Applied Algorithm Analysis*, comparing classical and optimized pathfinding algorithms: **A\***, **Dijkstra**, **DFS**, and **JPS (Jump Point Search)**.  
 The study focuses on performance, path optimality, and efficiency across different grid-based environments.
 
 

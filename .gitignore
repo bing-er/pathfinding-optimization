@@ -3,6 +3,10 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# OS & IDE junk
+.DS_Store
+.idea/
+
 # C extensions
 *.so
 .idea
@@ -206,5 +210,3 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
-.DS_Store
-.idea/

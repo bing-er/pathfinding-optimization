@@ -34,16 +34,12 @@ This project aims to:
 ## 🗂️ Repository Structure
 ```
 pathfinding-optimization/
-├── data/                    # Sample grid maps and test cases
-│   └── maps/                # Example .txt or .csv grid files
 ├── docs/                    # Documentation and reports
 │   ├── proposal.pdf         # Submitted project proposal
 │   ├── report_draft.docx    # In-progress final report
 │   └── slides.pptx          # Presentation slides
-├── notebooks/                       # Jupyter notebooks for experiments and demos
-│   ├── 01_astar_demo.ipynb          # Interactive A* pathfinding demo
-│   ├── 02_dijkstra_runtime.ipynb    # Runtime analysis for Dijkstra’s algorithm
-│   └── 03_visualization_tests.ipynb # Prototyping plots/heatmaps before moving to src/
+├── notebooks/                     # Jupyter notebooks for experiments and demos
+│   └── final_grid_benchmark.ipynb # Prototyping plots/heatmaps before moving to src/
 ├── results/                 # Experiment outputs, logs, and performance data
 │   ├── figures/             # Generated charts and comparison graphs
 │   └── logs/                # Raw runtime and node expansion logs
@@ -55,8 +51,6 @@ pathfinding-optimization/
 │   │   ├── jps.py           # Jump Point Search (JPS) implementation
 │   │   └── mazegenerator.py # DFS-based random maze generator
 │   ├── core/                # Shared components
-│   │   ├── grid.py          # Grid representation and movement rules
-│   │   ├── heuristics.py    # Heuristic functions (Manhattan, Octile, etc.)
 │   │   └── utils.py         # Utility functions (logging, timers, helpers)
 │   ├── visualizations/      # Visualization and performance analysis
 │   │   ├── charts.py        # Static plots for paths and metrics
@@ -124,9 +118,9 @@ The full testing pipeline for **runtime**, **path length**, and **node-expansion
 The repository is now fully operational, supporting **reproducible experiments**, **runtime logging**, and **benchmark visualizations**.
 ### ✅ Highlights (Week 11)
 **Algorithm Integration & Framework**<br>
-✔️ All algorithms (A*, Dijkstra, DFS, JPS) integrated and verified under main.py --compare.
-✔️ Unified output schema established for cross-algorithm comparison.
-✔️ Consistent testing environment established using fixed random seeds.
+* ✔️ All algorithms (A*, Dijkstra, DFS, JPS) integrated and verified under main.py --compare.
+* ✔️ Unified output schema established for cross-algorithm comparison.
+* ✔️ Consistent testing environment established using fixed random seeds.
 
 **Benchmark & Testing Pipeline**<br>
 * ✔️ Performance testing plan finalized
@@ -157,12 +151,12 @@ Finalized the **Jump Point Search (JPS)** algorithm with jump + pruning logic.
 * Coordinated with team for data collection and figure generation.
 
 **🧩 Binger**
-Implemented and maintained the **main runner** (`main.py`) with unified execution and `--compare` mode.
-Integrated Vibhor’s visualization branch into `main` and verified functionality.
-Updated **logging and result management** for consistent output to `results/figures/` and `results/logs/`.
+* Implemented and maintained the unified **main runner** (`main.py`) and `--compare` mode.
+* Integrated Vibhor’s visualization branch and validated its functionality.
+* Updated the logging and results pipeline for consistent output to
+* `results/figures/` and `results/logs/` directories.
 * Coordinated Week 11 progress and organized next-phase performance testing tasks.
-* Added detailed comments and clarifications inside the benchmark notebook
-* (final_grid_benchmark.ipynb) to improve readability, explain logic flow, and support team understanding.
+* Added detailed comments and clarifications inside the benchmark notebook (`final_grid_benchmark.ipynb`) to improve readability, explain logic flow, and support team understanding.
 
 ## 📅 Next Milestones
 ### Pefrformance Testing (Nov 15 - Nov 22)

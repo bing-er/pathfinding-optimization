@@ -157,12 +157,12 @@ Finalized the **Jump Point Search (JPS)** algorithm with jump + pruning logic.
 * Coordinated with team for data collection and figure generation.
 
 **🧩 Binger**
-Implemented and maintained the **main runner** (`main.py`) with unified execution and `--compare` mode.
-Integrated Vibhor’s visualization branch into `main` and verified functionality.
-Updated **logging and result management** for consistent output to `results/figures/` and `results/logs/`.
+* Implemented and maintained the unified **main runner** (`main.py`) and `--compare` mode.
+* Integrated Vibhor’s visualization branch and validated its functionality.
+* Updated the logging and results pipeline for consistent output to
+* `results/figures/` and `results/logs/` directories.
 * Coordinated Week 11 progress and organized next-phase performance testing tasks.
-* Added detailed comments and clarifications inside the benchmark notebook
-* (final_grid_benchmark.ipynb) to improve readability, explain logic flow, and support team understanding.
+* Added detailed comments and clarifications inside the benchmark notebook (`final_grid_benchmark.ipynb`) to improve readability, explain logic flow, and support team understanding.
 
 ## 📅 Next Milestones
 ### Pefrformance Testing (Nov 15 - Nov 22)

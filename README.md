@@ -93,7 +93,6 @@ python src/algorithms/jps.py
 Or compare all from the main runner:
 ```
 python src/main.py
-python src/main.py --compare --size 21 --seed 42
 ```
 ### 4. Visualize Results
 Generated logs and performance visualizations will appear in the results/ folder.
@@ -117,19 +116,28 @@ The repository is now fully organized with a clear folder structure, evaluation 
 Our next milestone is to integrate and test **JPS**, comparing its performance against the baseline algorithms. The team will also begin logging runtime and node-expansion data and preparing visual outputs for comparison. In the following weeks, we’ll move toward compiling the final report, creating visuals, and getting ready for our presentation in Week **14 (Dec 2)**.
 
 ### Week 11 - Transition to Performance Testing
-By **Week 11 (Nov 11, 2025)**, our team completed the **integration phase** and transitioned into the **performance testing and visualization stage** of the Pathfinding Optimization project.
-All four pathfinding algorithms — **A***, **Dijkstra**, **DFS**, and **JPS** — are now unified within a consistent framework, allowing for direct comparison on identical grids.
-The testing plan for runtime, path length, and node-expansion metrics has been finalized, and the visualization framework is now being extended for comparative analysis.
+By **Week 11 (Nov 11, 2025)**, our team completed the integration phase and transitioned into the **performance testing and visualization stage** of the Pathfinding Optimization Project.
+All four pathfinding algorithms — **A***, **Dijkstra**, **DFS**, and **JPS** — are now unified under a consistent evaluation framework, allowing direct comparison on identical grid environments.
 
-The repository is fully functional and organized, supporting reproducible experiments, runtime logging, and visualization for performance comparison.
+The full testing pipeline for **runtime**, **path length**, and **node-expansion metrics** has been finalized. The visualization layer is now being extended for clearer comparative analysis.
 
-**🧠 Highlights**
-* ✅ **All algorithms** **(A***, **Dijkstra**, **DFS**, **JPS)** integrated and verified under `main.py --compare`.
-* ✅ **Performance testing plan finalized** (grid sizes 10×10 → 101×101; obstacle densities 30%, 50%, 70%).
-* ✅ **Consistent maze generation confirmed** using random seed control for reproducible experiments.
-* ✅ **Visualization notebooks updated** to include runtime and node-expansion analyses.
-* ✅ **Benchmark suite** (`maze_benchmark_corners`) integrated for comparative testing.
-* ✅ **Team meeting held (Nov 11)** to review integration results and assign testing responsibilities.
+The repository is now fully operational, supporting **reproducible experiments**, **runtime logging**, and **benchmark visualizations**.
+### ✅ Highlights (Week 11)
+**Algorithm Integration & Framework**<br>
+✔️ All algorithms (A*, Dijkstra, DFS, JPS) integrated and verified under main.py --compare.
+✔️ Unified output schema established for cross-algorithm comparison.
+✔️ Consistent testing environment established using fixed random seeds.
+
+**Benchmark & Testing Pipeline**<br>
+* ✔️ Performance testing plan finalized
+* → Grid sizes: 10×10 → 101×101
+* → Densities: 30%, 50%, 70%
+* ✔️ Visualization notebooks updated for runtime and node-expansion comparison.
+* ✔️ Benchmark suite (maze_benchmark_corners) integrated for comparative testing.
+
+**Team Collaboration**<br>
+* ✔️ Team meeting (Nov 11) to finalize responsibilities for runtime testing and data consolidation.
+* ✔️ Visualization and logging pipeline now stable for batch testing.
 
 #### 👥 Team Contributions
 **🧠 Yansong**
@@ -138,9 +146,9 @@ The repository is fully functional and organized, supporting reproducible experi
 * Assisted in testing alignment between all algorithm interfaces.
 
 **⚙️ Sepehr**
-* Finalized the **Jump Point Search (JPS)** algorithm with jump + pruning logic.
-* Verified performance across shared grids and validated output consistency.
-* Supported cross-comparison testing between JPS and baseline algorithms.
+Finalized the **Jump Point Search (JPS)** algorithm with jump + pruning logic.
+* Verified cross-comparison results between JPS and the baseline methods.
+* Supported debugging and consistency checks across the benchmarking pipeline.
 
 **📊 Vibhor**
 * Developed and pushed **benchmark testing notebooks and scripts** (`maze_benchmark_corners.ipynb`, `.py`, `.html`).
@@ -149,17 +157,27 @@ The repository is fully functional and organized, supporting reproducible experi
 * Coordinated with team for data collection and figure generation.
 
 **🧩 Binger**
-* Implemented and maintained the **main runner** (`main.py`) with unified execution and `--compare` mode.
-* Integrated Vibhor’s visualization branch into `main` and verified functionality.
-* Updated **logging and result management** for consistent output to `results/figures/` and `results/logs/`.
-* Documented Week 11 progress and coordinated next-phase performance testing assignments.
+Implemented and maintained the **main runner** (`main.py`) with unified execution and `--compare` mode.
+Integrated Vibhor’s visualization branch into `main` and verified functionality.
+Updated **logging and result management** for consistent output to `results/figures/` and `results/logs/`.
+* Coordinated Week 11 progress and organized next-phase performance testing tasks.
+* Added detailed comments and clarifications inside the benchmark notebook
+* (final_grid_benchmark.ipynb) to improve readability, explain logic flow, and support team understanding.
 
 ## 📅 Next Milestones
-* Conduct batch tests on grid sizes **31×31**, **61×61**, and **91×91**.
-* Collect runtime, path length, and node-expansion data across all algorithms.
-* Finalize **comparison plots** and integrate them into the final report.
-* Begin drafting **final report and presentation slides** (Nov 22 – Dec 2).
-
+### Pefrformance Testing (Nov 15 - Nov 22)
+Conduct batch tests on grid sizes **31×31**, **61×61**, and **91×91**.
+* Collect:
+  * Runtime measurements
+  * Path length results
+  * Node-expansion metrics
+  * across all algorithms.
+* Finalize plotting and comparison results for the final report.
+### Final Deliverables (Nov 22 – Dec 2)
+* Integrate comparison plots into the final paper.
+* Begin drafting:
+  * Final Report
+  * Presentation Slides (Team 3)
 
 ## 📅 Updated Project Timeline
 

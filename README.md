@@ -93,6 +93,7 @@ python src/algorithms/jps.py
 Or compare all from the main runner:
 ```
 python src/main.py
+python src/main.py --compare --size 21 --seed 42
 ```
 ### 4. Visualize Results
 Generated logs and performance visualizations will appear in the results/ folder.

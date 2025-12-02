@@ -180,11 +180,14 @@ Conduct batch tests on grid sizes **31×31**, **61×61**, and **91×91**.
 | Proposal Submission | Oct 21, 2025 | ✅ Submitted |
 | Implementation Phase (A*, Dijkstra, DFS, JPS) | Nov 8, 2025 | ✅ Completed |
 | Performance Testing + Visualization | Nov 18, 2025 | ✅ Started (Nov 11 Meeting) |
-| Final Report & Presentation | Dec 2, 2025 | ⏳ Upcoming |
+| Final Report & Presentation | Dec 2, 2025 | ✅ Completed |
 
 
 ## 🧠 Visualization Example
-*(Runtime-comparison and search-progress figures will be added after completing batch experiments.)*
+<img width="590" height="489" alt="RuntimevsNodesEXpanded" src="https://github.com/user-attachments/assets/643e31a2-2c47-4597-bb14-a5002bc66c8f" />
+
+<img width="569" height="590" alt="CanonicalOverlays" src="https://github.com/user-attachments/assets/c7b49b91-8845-4a67-93ed-0cb9dc38bb7b" />
+
 
 
 ## 📜 License

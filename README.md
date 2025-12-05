@@ -34,37 +34,38 @@ This project aims to:
 ## 🗂️ Repository Structure
 ```
 pathfinding-optimization/
-├── data/                    # Sample grid maps and test cases
-│   └── maps/                # Example .txt or .csv grid files
 ├── docs/                    # Documentation and reports
 │   ├── proposal.pdf         # Submitted project proposal
-│   ├── report_draft.docx    # In-progress final report
+│   ├── final_report.pdf     # Submitted final report
 │   └── slides.pptx          # Presentation slides
+│
 ├── notebooks/                       # Jupyter notebooks for experiments and demos
-│   ├── 01_astar_demo.ipynb          # Interactive A* pathfinding demo
-│   ├── 02_dijkstra_runtime.ipynb    # Runtime analysis for Dijkstra’s algorithm
-│   └── 03_visualization_tests.ipynb # Prototyping plots/heatmaps before moving to src/
+│   └── final_grid_benchmark.ipynb   # Final grid benchmarking experiment
+│
 ├── results/                 # Experiment outputs, logs, and performance data
 │   ├── figures/             # Generated charts and comparison graphs
 │   └── logs/                # Raw runtime and node expansion logs
+│
 ├── src/                     # Source code for all algorithms
-│   ├── algorithms/          # Pathfinding algorithm implementations
-│   │   ├── astar.py         # A* baseline algorithm
-│   │   ├── dfs.py           # Depth-First Search baseline
-│   │   ├── dijkstra.py      # Dijkstra baseline algorithm
-│   │   ├── jps.py           # Jump Point Search (JPS) implementation
-│   │   └── mazegenerator.py # DFS-based random maze generator
-│   ├── core/                # Shared components
-│   │   ├── grid.py          # Grid representation and movement rules
-│   │   ├── heuristics.py    # Heuristic functions (Manhattan, Octile, etc.)
-│   │   └── utils.py         # Utility functions (logging, timers, helpers)
-│   ├── visualizations/      # Visualization and performance analysis
-│   │   ├── charts.py        # Static plots for paths and metrics
-│   │   └── runtime_plot.py  # Search-progress / runtime-steps plots
+│   └── algorithms/          # Pathfinding algorithm implementations
+│       ├── astar.py         # A* baseline algorithm
+│       ├── dfs.py           # Depth-First Search baseline
+│       ├── dijkstra.py      # Dijkstra baseline algorithm
+│       ├── jps.py           # Jump Point Search (JPS) implementation
+│       └── mazegenerator.py # DFS-based random maze generator
+│   └── core/                # Shared components
+│       ├── grid.py          # Grid representation and movement rules
+│       └── utils.py         # Utility functions (logging, timers, helpers)
+│   └── visualizations/      # Visualization and performance analysis
+│       ├── charts.py        # Static plots for paths and metrics
+│       └── runtime_plot.py  # Search-progress / runtime-steps plots
 │   └── main.py              # Entry point to run and compare algorithms
-└── README.md                # Project overview and usage instructions
+│ 
+├── .gitignore               # Git ignore file
+├── LICENSE                  # Project license file
+├── README.md                # Project overview and usage instructions
+├── requirements.txt         # Python package dependencies
 ```
-
 
 ## ⚙️ Getting Started
 
@@ -111,7 +112,39 @@ You can adjust grid size, obstacle density, or heuristic type in main.py.
 ### Week 10 – Midterm Status
 By Week 10, our team has completed the baseline phase of the project. The core pathfinding algorithms - **A***, **Dijkstra**, and **DFS** - have all been implemented, tested, and merged into the main branch. We also added a maze generator to hlep us create consistent test grids for experiments. 
 
-The repository is now fully organized with a clear folder structure, evaluation metrics, and documentation. Everyone’s roles are defined — **Yansong** handled the baseline algorithms, **Sepehr** is leading the **Jump Point Search (JPS)** development, **Vibhor** is focusing on evaluation and visualization, and **Binger** is managing documentation, scheduling, and overall coordination.
+The repository is now fully organized with a clear folder structure, evaluation metrics, and documentation. Everyone’s roles are defined
+
+🧠 **Yansong** 
+* Implemented and verified all baseline algorithms:
+  * src/algorithms/astar.py
+  * src/algorithms/dfs.py
+  * src/algorithms/dijkstra.py
+* Ensured path optimality and correctness for each baseline method.
+
+⚙️ **Sepehr**
+* Fully implemented the Jump Point Search (JPS) algorithm:
+  * src/algorithms/jps.py
+* Added pruning, jump logic, and neighbor optimization for JPS.
+* Supported debugging and alignment of JPS outputs with the baseline algorithms.
+* Ensured the JPS module integrated cleanly with the main runner.
+
+📊 **Vibhor**
+* Created the benchmark and visualization environment on Jupyter notebook:
+  * Developed evaluation notebooks and scripts for algorithm comparison.
+  * Designed performance testing plan (grid sizes, obstacle densities).
+  * Set up visualization pipeline for runtime and node-expansion comparison.
+* Generated early comparison plots and assisted in validating algorithm outputs.
+
+🧩 **Binger**
+* Implemented core project infrastructure:
+  * main.py — unified runner for all algorithms and comparison mode.
+  * src/core/utils.py — grid utilities, timing, logging helpers.
+  * src/visualizations/charts.py — plotting functions.
+  * src/runtime_plot.py — runtime comparison script.
+* Generated initial benchmark outputs:
+  * results/figures/comparison.png
+  * results/logs/runtime_log.csv
+* Organized the folder structure, coordinated team workflow, and managed integration.
 
 Our next milestone is to integrate and test **JPS**, comparing its performance against the baseline algorithms. The team will also begin logging runtime and node-expansion data and preparing visual outputs for comparison. In the following weeks, we’ll move toward compiling the final report, creating visuals, and getting ready for our presentation in Week **14 (Dec 2)**.
 
@@ -124,14 +157,14 @@ The full testing pipeline for **runtime**, **path length**, and **node-expansion
 The repository is now fully operational, supporting **reproducible experiments**, **runtime logging**, and **benchmark visualizations**.
 ### ✅ Highlights (Week 11)
 **Algorithm Integration & Framework**<br>
-✔️ All algorithms (A*, Dijkstra, DFS, JPS) integrated and verified under main.py --compare.
-✔️ Unified output schema established for cross-algorithm comparison.
+✔️ All algorithms (A*, Dijkstra, DFS, JPS) integrated and verified under main.py --compare.<br>
+✔️ Unified output schema established for cross-algorithm comparison.<br>
 ✔️ Consistent testing environment established using fixed random seeds.
 
 **Benchmark & Testing Pipeline**<br>
 * ✔️ Performance testing plan finalized
-* → Grid sizes: 10×10 → 101×101
-* → Densities: 30%, 50%, 70%
+  * → Grid sizes: 10×10 → 101×101
+  * → Densities: 30%, 50%, 70%
 * ✔️ Visualization notebooks updated for runtime and node-expansion comparison.
 * ✔️ Benchmark suite (maze_benchmark_corners) integrated for comparative testing.
 
@@ -157,9 +190,10 @@ Finalized the **Jump Point Search (JPS)** algorithm with jump + pruning logic.
 * Coordinated with team for data collection and figure generation.
 
 **🧩 Binger**
-Implemented and maintained the **main runner** (`main.py`) with unified execution and `--compare` mode.
-Integrated Vibhor’s visualization branch into `main` and verified functionality.
-Updated **logging and result management** for consistent output to `results/figures/` and `results/logs/`.
+
+* Implemented and maintained the **main runner** (`main.py`) with unified execution and `--compare` mode.
+* Integrated Vibhor’s visualization branch into `main` and verified functionality.
+* Updated **logging and result management** for consistent output to `results/figures/` and `results/logs/`.
 * Coordinated Week 11 progress and organized next-phase performance testing tasks.
 * Added detailed comments and clarifications inside the benchmark notebook
 * (final_grid_benchmark.ipynb) to improve readability, explain logic flow, and support team understanding.
@@ -185,13 +219,21 @@ Conduct batch tests on grid sizes **31×31**, **61×61**, and **91×91**.
 |----------------|--------------|-------------|
 | Proposal Submission | Oct 21, 2025 | ✅ Submitted |
 | Implementation Phase (A*, Dijkstra, DFS, JPS) | Nov 8, 2025 | ✅ Completed |
-| Performance Testing + Visualization | Nov 18, 2025 | ✅ Started (Nov 11 Meeting) |
-| Final Report & Presentation | Dec 2, 2025 | ⏳ Upcoming |
+| Performance Testing + Visualization | Nov 18, 2025 | ✅ Completed |
+| Final Report & Presentation | Dec 2, 2025 | ✅ Completed |
 
 
-## 🧠 Visualization Example
-*(Runtime-comparison and search-progress figures will be added after completing batch experiments.)*
+## 📊 Additional Visualization
 
+<img width="600" alt="RuntimeComparison" src="results/figures/fig_runtime91.png">
+
+<img width="600" alt="RuntimeComparison" src="results/figures/fig_subopt.png">
+
+<img width="600" alt="RuntimeComparison" src="results/figures/fig_ecdf.png">
+
+<img width="600" alt="RuntimeComparison" src="results/figures/fig_scaling.png">
+
+<img width="600" alt="RuntimeComparison" src="results/figures/comparison_final.png">
 
 ## 📜 License
 

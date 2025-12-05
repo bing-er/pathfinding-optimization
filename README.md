@@ -195,8 +195,7 @@ Finalized the **Jump Point Search (JPS)** algorithm with jump + pruning logic.
 * Integrated Vibhor’s visualization branch into `main` and verified functionality.
 * Updated **logging and result management** for consistent output to `results/figures/` and `results/logs/`.
 * Coordinated Week 11 progress and organized next-phase performance testing tasks.
-* Added detailed comments and clarifications inside the benchmark notebook
-* (final_grid_benchmark.ipynb) to improve readability, explain logic flow, and support team understanding.
+* Added detailed comments and clarifications inside the benchmark notebook (`final_grid_benchmark.ipynb`) to improve readability, explain logic flow, and support team understanding.
 
 ## 📅 Next Milestones
 ### Pefrformance Testing (Nov 15 - Nov 22)
